@@ -1,0 +1,162 @@
+#sectionInfo{
+    background-color: #34c096;
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    height:auto;
+    overflow:hidden;
+    width: 100%;
+}
+.sectionInfo{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+#sectionIndicadores{
+    background-color: #8b8c89;
+    border-radius: 0.5rem;
+}
+#sectionReservas{
+    background-color: #8b8c89;
+    border-radius: 0.5rem;
+}
+.container{
+    background-color: #274c77;
+}
+.row{
+    justify-content: space-between;
+}
+.indicador{
+    background-color: white;
+    border-radius: 1rem;
+    min-width: 16rem;
+    max-width: 30rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center 
+}
+.resultadoIndicador{
+    font-size: 2.5rem;
+    color: #274c77;
+    margin: 0;
+    line-height:100%;
+    width: 100%;
+}
+.descricaoIndicador{
+    font-size: 1.3em;
+    color: black;
+    margin: 0;
+    line-height:100%;
+    width: 100%;
+    margin: 0; 
+}
+.bntConsultaReserva{
+    background-color: #34c096;
+    border: 1px solid #274c77;
+    margin: 0;
+    padding: 0.1rem;
+}
+.tituloTabela{
+    background-color: #274c77;
+    line-height: 100%;
+    color: white;
+    caption-side: top;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.tabelaStatus{
+    background-color: white;
+    border-collapse: collapse;
+    border-style: hidden;
+    width: 100%;
+    border-radius: 0rem 0rem 1rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+td,th{
+    padding: 0.5rem;
+    border: 1px solid #274c77;
+}
+tr{
+    height: 2.55rem;
+    min-height: 2.55rem;
+}
+h1{
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    color: black;
+    font-size: 1.8rem;
+}
+.cotacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+}
+.infos{
+    text-align: right;
+    color: white;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+}
+#outputCotacao{
+    height: 2rem;
+    background-color: #274c77;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    color: white;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+#selectCotacao{
+    height: 2rem;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    width: 5rem;
+    font-weight: bold;
+}
+.statusInterno{
+    height: 16rem;
+    overflow-y: auto;
+    min-height: 16rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+.statusExterno{
+    max-height: 16rem;
+    height: 16rem;
+    min-height: 16rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background:#e4eeb1;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #e4eeb1;
+  }
