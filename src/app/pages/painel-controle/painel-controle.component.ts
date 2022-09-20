@@ -17,6 +17,13 @@ indicadores!:Indicadores;
 proximasChegadas: Reserva[]=[];
 proximasPartidas: Reserva[]=[];
 
+//inicilização das varíaveis do elemento pagination
+pageChegadas = 1;
+pagePartidas = 1;
+pageSize = 4;
+collectionSizePartidas = 0;
+collectionSizeChegadas = 0;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -25,6 +32,13 @@ proximasPartidas: Reserva[]=[];
     this.infoIndicadores();
     this.infoChegadas();
     this.infoPartidas();
+
+    this.pageChegadas = 1;
+    this.pagePartidas = 1;
+    this.pageSize = 4;
+    this.collectionSizePartidas = this.proximasPartidas.length;
+    this.collectionSizeChegadas = this.proximasChegadas.length;
+
   }
 
   /**
@@ -75,10 +89,9 @@ proximasPartidas: Reserva[]=[];
     this.proximasChegadas.push({idReserva:"002", nomeHospede:"Luis", quarto: "02",status:"Check-in Realizado"});
     this.proximasChegadas.push({idReserva:"003", nomeHospede:"Ricardo", quarto: "03",status:"Check-in Realizado",});
     this.proximasChegadas.push({idReserva:"004", nomeHospede:"Gean", quarto: "04",status:"Reservado",});
-    this.proximasChegadas.push({idReserva:"004", nomeHospede:"Gean", quarto: "04",status:"Reservado",});
-
+    
      //garante que haverá pelo menos quatro linhas na tabela de chegadas
-     while(this.proximasChegadas.length <4){
+     while((this.proximasChegadas.length % 4) != 0){
       this.proximasChegadas.push({idReserva:"null", nomeHospede:"", quarto: "",status:""}); 
     }
   }
@@ -90,10 +103,13 @@ proximasPartidas: Reserva[]=[];
   infoPartidas(){
     this.proximasPartidas.push({idReserva:"005", nomeHospede:"Rafael", quarto: "05",status:"Hospedado"});
     this.proximasPartidas.push({idReserva:"006", nomeHospede:"Ronaldo", quarto: "06",status:"Check-Out Realizado"});
-
+    this.proximasPartidas.push({idReserva:"005", nomeHospede:"Rafael", quarto: "05",status:"Hospedado"});
+    this.proximasPartidas.push({idReserva:"006", nomeHospede:"Ronaldo", quarto: "06",status:"Check-Out Realizado"});      
+    this.proximasPartidas.push({idReserva:"005", nomeHospede:"Rafael", quarto: "05",status:"Hospedado"});
+    this.proximasPartidas.push({idReserva:"006", nomeHospede:"Ronaldo", quarto: "06",status:"Check-Out Realizado"});
 
     //garante que haverá pelo menos quatro linhas
-    while(this.proximasPartidas.length <4){
+    while((this.proximasPartidas.length % 4) != 0){
       this.proximasPartidas.push({idReserva:"null", nomeHospede:"", quarto: "",status:""}); 
     }
   }

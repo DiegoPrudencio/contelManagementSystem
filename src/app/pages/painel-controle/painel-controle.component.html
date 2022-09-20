@@ -1,114 +1,133 @@
-
-<div class="container container-fluid">
-    <h1>
-        Painel de Controle
-    </h1>
-    <section id="sectionInfo">
-        <div class="row sectionInfo">
-            <div class="col cotacao">
-                <div>
-                    <select id="selectCotacao" (click)="infoMoeda();" [(ngModel)]="selectCotacao">
-                        <option value="dolar" >Dólar</option>
-                        <option value="euro">Euro</option>
-                    </select>
+<body>
+    <div class="container container-fluid">
+        <h1>
+            Painel de Controle
+        </h1>
+        <section id="sectionInfo">
+            <div class="row sectionInfo">
+                <div class="col-4 cotacao">
+                    <div>
+                        <select id="selectCotacao" (click)="infoMoeda();" [(ngModel)]="selectCotacao">
+                            <option value="dolar" >Dólar</option>
+                            <option value="euro">Euro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <output id="outputCotacao">{{textCotacaoMoeda}}</output>
+                    </div>
                 </div>
-                <div>
-                    <output id="outputCotacao">{{textCotacaoMoeda}}</output>
-                </div>
-            </div>
-            <div class="col infos">
-                {{textInformacoesLocais}}
-            </div>
-        </div>
-    </section>
-    <section id="sectionIndicadores">
-        <div class="row m-2">
-            <h2 class="m-2">Principais Indicadores</h2>
-        </div>
-        <div class="row m-2">
-            <div class="indicador col m-2">
-                    <p class="resultadoIndicador">{{indicadores.taxaOcupacao}}</p>
-                    <p class="descricaoIndicador">Taxa de Ocupação</p>
-            </div>
-            <div class="indicador col m-2">
-                <p class="resultadoIndicador">{{indicadores.revPAR}}</p>
-                <p class="descricaoIndicador">RevPAR</p>
-            </div>
-            <div class="indicador col m-2">
-                <p class="resultadoIndicador">R$ 0,00</p>
-                <p class="descricaoIndicador">Receitas</p>
-            </div>
-            <div class="indicador col m-2">
-                <p class="resultadoIndicador">{{indicadores.novasReservas}}</p>
-                <p class="descricaoIndicador">Novas Reservas</p>
-            </div>
-        </div>
-        <div class="row m-2">
-            <div class="indicador col m-2">
-                    <p class="resultadoIndicador">{{indicadores.qntHospedes}}</p>
-                    <p class="descricaoIndicador">Nº de Hospedes</p>
-            </div>
-            <div class="indicador col m-2">
-                <p class="resultadoIndicador">{{indicadores.diariaMedia}}</p>
-                <p class="descricaoIndicador">Diária Média</p>
-            </div>
-            <div class="indicador col m-2">
-                <p class="resultadoIndicador">{{indicadores.despesas}}</p>
-                <p class="descricaoIndicador">Despesas</p>
-            </div>
-            <div class="indicador col m-2">
-                <p class="resultadoIndicador">{{indicadores.reservasCanceladas}}</p>
-                <p class="descricaoIndicador">Reservas Canceladas</p>
-            </div>
-        </div>
-    </section>
-    <section id="sectionReservas">
-        <div class="row  m-2">
-            <h2 class="m-2">Reservas</h2>
-        </div>
-        <div class="row  m-2">
-            <div class="col m-2 statusExterno">
-                <div class="statusInterno">
-                    <table class="tabelaStatus">
-                        <caption class="tituloTabela">Chegadas</caption>    
-                           <tr>
-                             <th scope="col">Hóspede</th>
-                             <th scope="col">Quarto</th>
-                             <th scope="col">Status</th>
-                             <th scope="col"></th>
-                           </tr>
-                         <tbody>
-                           <tr *ngFor="let proximasChegadas of proximasChegadas">
-                             <td>{{proximasChegadas.nomeHospede}}</td>
-                             <td>{{proximasChegadas.quarto}}</td>
-                             <td>{{proximasChegadas.status}}</td>
-                             <td><button class="btn bntConsultaReserva" type="button" href="#" *ngIf="proximasChegadas.idReserva!='null'" (click)="detalharReserva(proximasChegadas.idReserva);">Ir para reserva</button></td>
-                           </tr>
-                         </tbody>
-                       </table>
+                <div class="col-8 infos">
+                    {{textInformacoesLocais}}
                 </div>
             </div>
-            <div class="col m-2 statusExterno">
-                <div class="statusInterno">
-                    <table class="tabelaStatus">
-                        <caption class="tituloTabela">Partidas</caption>    
-                        <tr>
-                            <th scope="col">Hóspede</th>
-                            <th scope="col">Quarto</th>
-                            <th scope="col">Status</th>
-                            <th scope="col"></th>
-                        </tr>
-                        <tbody>
-                        <tr *ngFor="let proximasPartidas of proximasPartidas">
-                            <td>{{proximasPartidas.nomeHospede}}</td>
-                            <td>{{proximasPartidas.quarto}}</td>
-                            <td>{{proximasPartidas.status}}</td>
-                            <td><button class="btn bntConsultaReserva" type="button" href="#" *ngIf="proximasPartidas.idReserva!='null'" (click)="detalharReserva(proximasPartidas.idReserva);">Ir para reserva</button></td>
-                        </tr>
-                        </tbody>
-                    </table>
+        </section>
+        <section id="sectionIndicadores">
+            <div class="row rowSecoes">
+                <h2>Principais Indicadores</h2>
+            </div>
+            <div class="row rowIndicadores">
+                <div class="indicador col m-2">
+                        <p class="resultadoIndicador">{{indicadores.taxaOcupacao}}</p>
+                        <p class="descricaoIndicador">Taxa de Ocupação</p>
                 </div>
-              </div>
-        </div>
-    </section>
-</div>
+                <div class="indicador col m-2">
+                    <p class="resultadoIndicador">{{indicadores.revPAR}}</p>
+                    <p class="descricaoIndicador">RevPAR</p>
+                </div>
+                <div class="indicador col m-2">
+                    <p class="resultadoIndicador">R$ 0,00</p>
+                    <p class="descricaoIndicador">Receitas</p>
+                </div>
+                <div class="indicador col m-2">
+                    <p class="resultadoIndicador">{{indicadores.novasReservas}}</p>
+                    <p class="descricaoIndicador">Novas Reservas</p>
+                </div>
+            </div>
+            <div class="row rowIndicadores">
+                <div class="indicador col m-2">
+                        <p class="resultadoIndicador">{{indicadores.qntHospedes}}</p>
+                        <p class="descricaoIndicador">Nº de Hospedes</p>
+                </div>
+                <div class="indicador col m-2">
+                    <p class="resultadoIndicador">{{indicadores.diariaMedia}}</p>
+                    <p class="descricaoIndicador">Diária Média</p>
+                </div>
+                <div class="indicador col m-2">
+                    <p class="resultadoIndicador">{{indicadores.despesas}}</p>
+                    <p class="descricaoIndicador">Despesas</p>
+                </div>
+                <div class="indicador col m-2">
+                    <p class="resultadoIndicador">{{indicadores.reservasCanceladas}}</p>
+                    <p class="descricaoIndicador">Reservas Canceladas</p>
+                </div>
+            </div>
+        </section>
+        <section id="sectionReservas">
+            <div class="row rowSecoes">
+                <h2>Reservas</h2>
+            </div>
+            <div class="row  rowIndicadores">
+                <div class="col m-2 statusExterno">
+                    <div class="statusInterno">
+                        <table class="tabelaStatus">
+                            <caption class="tituloTabela">Chegadas</caption>    
+                               <tr>
+                                 <th scope="col">Hóspede</th>
+                                 <th scope="col">Quarto</th>
+                                 <th scope="col">Status</th>
+                                 <th scope="col"></th>
+                               </tr>
+                             <tbody>
+                               <tr *ngFor="let proximasChegadas of proximasChegadas | slice: (pageChegadas-1) * pageSize : pageChegadas * pageSize">
+                                 <td>{{proximasChegadas.nomeHospede}}</td>
+                                 <td>{{proximasChegadas.quarto}}</td>
+                                 <td>{{proximasChegadas.status}}</td>
+                                 <td><button class="btn bntConsultaReserva" type="button" href="#" *ngIf="proximasChegadas.idReserva!='null'" (click)="detalharReserva(proximasChegadas.idReserva);">Ir para reserva</button></td>
+                               </tr>
+                             </tbody>
+                           </table>
+                    </div>
+                    <div class="rowPagination">
+                        <ngb-pagination class="d-flex justify-content-end" 
+                            [(page)]="pageChegadas"
+                            [pageSize]="pageSize"
+                            [collectionSize]="collectionSizeChegadas"
+                            size="sm"
+                            >
+                        </ngb-pagination>
+                    </div>
+                </div>
+                <div class="col m-2 statusExterno">
+                    <div class="statusInterno">
+                        <table class="tabelaStatus">
+                            <caption class="tituloTabela">Partidas</caption>    
+                            <tr>
+                                <th scope="col">Hóspede</th>
+                                <th scope="col">Quarto</th>
+                                <th scope="col">Status</th>
+                                <th scope="col"></th>
+                            </tr>
+                            <tbody>
+                            <tr *ngFor="let buscaReserva of proximasPartidas | slice: (pagePartidas-1) * pageSize : pagePartidas * pageSize">
+                                <td>{{buscaReserva.nomeHospede}}</td>
+                                <td>{{buscaReserva.quarto}}</td>
+                                <td>{{buscaReserva.status}}</td>
+                                <td><button class="btn bntConsultaReserva" type="button" href="#" *ngIf="buscaReserva.idReserva!='null'" (click)="detalharReserva(buscaReserva.idReserva);">Ir para reserva</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="rowPagination">
+                        <ngb-pagination class="d-flex justify-content-end" 
+                            [(page)]="pagePartidas"
+                            [pageSize]="pageSize"
+                            [collectionSize]="collectionSizePartidas"
+                            size="sm"
+                            >
+                        </ngb-pagination>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </div>    
+</body>
