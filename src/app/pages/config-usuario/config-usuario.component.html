@@ -1,0 +1,92 @@
+<form [formGroup]="formulario">
+    <div class="p-2 mx-2">
+        <h4>Configurações Usuários</h4>
+    </div>
+    <div class="container-fluid mx-auto row">
+        <div class="col pb-2">
+<!--    -->
+            <div class="pb-1 input-group-sm">
+                <!-- Nome Usuário -->
+                <label class="form-label m-0 p-0 tamanhoText" for="idNomeUser">Nome de Usuário</label>
+                <input class="form-control" type="text" id="idNomeUser" formControlName="nomeUser" placeholder="Nome...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('nomeUser')?.errors?.['required'] && formulario.get('nomeUser')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--    -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="idEmailUser">Email</label>
+                <input class="form-control" type="text" id="idEmailUser" formControlName="emailUser" placeholder="Email...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('emailUser')?.errors?.['required'] && formulario.get('emailUser')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+            <div *ngIf="formulario.get('emailUser')?.errors?.['email'] && formulario.get('emailUser')?.touched">
+                <p class="text-danger m-0">Isto não é um email</p>
+            </div>
+<!--    -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="idSenhaUser">Senha</label>
+                <input class="form-control" type="text" id="idSenhaUser" formControlName="senhaUser" placeholder="Senha...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('senhaUser')?.errors?.['required'] && formulario.get('senhaUser')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--    -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="">Confirme a Senha</label>
+                <input class="form-control" type="text" id="idConfirSenhaUser" formControlName="confirSenhaUser" placeholder="Senha...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('confirSenhaUser')?.errors?.['required'] && formulario.get('confirSenhaUser')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--    -->
+        </div>
+        <div class="col pb-2">
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="idNomeCompletoUser">Nome Completo</label>
+                <input class="form-control" type="text" id="idNomeCompletoUser" formControlName="nomeCompletoUser" placeholder="Nome Completo...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('nomeCompletoUser')?.errors?.['required'] && formulario.get('nomeCompletoUser')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--    -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label p-0 m-0 tamanhoText" for="">Cargo</label>
+                <select class="form-select">
+                    <option value="Quarto Simples">Gerente</option>
+                    <option value="Quarto Duplo">Recepcionista</option>
+                    <option value="Quarto Triplo">Financeiro</option>
+                </select>
+            </div>
+<!--    -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="idTelefoneUser">Contato Telefônico</label>
+                <input class="form-control" type="number" id="idTelefoneUser" formControlName="telefoneUser" placeholder="N° Telefone">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('telefoneUser')?.errors?.['required'] && formulario.get('telefoneUser')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+        </div>
+
+    </div>
+    <div class="container-fluid mx-auto row">
+        <div class="col pb-2">
+            <div class="pb-1 input-group-sm">
+                <a href="" class="link-secondary tamanhoText">Alterar Senha</a>
+            </div>
+        </div>
+        <div class="col pb-2">
+            <div  class="pb-1 d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="button" class="btn fundoBtn  tamanhoText">Salvar</button>
+            </div>
+        </div>
+    </div>
+</form>
