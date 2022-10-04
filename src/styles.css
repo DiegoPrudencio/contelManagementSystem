@@ -1,5 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
 html, body {
     height: 100%;
     background-color: #274C77;
 }
+
+.pagination > li > a
+{
+    background-color: white;
+    color:#274c77;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #D9D9D9;
+    background-color: white;
+    border-color: white;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #274c77 !Important;
+    border: solid 1px #274c77 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #274c77 !Important;
+    border: solid 1px #274c77;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

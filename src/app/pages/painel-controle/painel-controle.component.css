@@ -1,0 +1,162 @@
+body{
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #274c77;
+    min-height: 100vh;
+}
+.container{
+    background-color: #274c77;
+    padding-bottom: 0.5rem;
+}
+#sectionInfo{
+    background-color: #34c096;
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    height:auto;
+    overflow:hidden;
+    width: 100%;
+}
+.sectionInfo{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+#sectionIndicadores{
+    background-color: #D9D9D9;
+    border-radius: 0.5rem;
+}
+#sectionReservas{
+    background-color: #D9D9D9;
+    border-radius: 0.5rem;
+}
+.row{
+    justify-content: space-between;
+}
+.rowSecoes{
+    margin: 0.5rem 0.5rem 0 0.5rem;
+}
+.rowIndicadores{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.indicador{
+    background-color: white;
+    border-radius: 1rem;
+    min-width: 16rem;
+    max-width: 30rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center 
+}
+.resultadoIndicador{
+    font-size: 2.5rem;
+    color: #274c77;
+    margin: 0;
+    line-height:100%;
+    width: 100%;
+}
+.descricaoIndicador{
+    font-size: 1.3em;
+    color: black;
+    margin: 0;
+    line-height:100%;
+    width: 100%;
+    margin: 0; 
+}
+.bntConsultaReserva{
+    background-color: #34c096;
+    border: 1px solid #274c77;
+    margin: 0;
+    padding: 0.1rem;
+}
+.btn:active { background-color: #274c77 }
+.btn:hover { background-color: #274c77 }
+.tituloTabela{
+    background-color: #274c77;
+    line-height: 100%;
+    color: white;
+    caption-side: top;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.tabelaStatus{
+    background-color: white;
+    border-collapse: collapse;
+    border-style: hidden;
+    border-bottom: 1px solid #274c77;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+td,th{
+    padding: 0.5rem;
+    border: 1px solid #274c77;
+}
+tr{
+    height: 2.9rem;
+    min-height: 2.9rem;
+}
+h1{
+    color: white;
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    color: black;
+    margin: 0;
+    font-size: 1.8rem;
+}
+.cotacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.infos{
+    text-align: right;
+    color: white;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+#outputCotacao{
+    height: 2rem;
+    background-color: #274c77;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    color: white;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+#selectCotacao{
+    height: 2rem;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    width: 5rem;
+    font-weight: bold;
+}
+.statusInterno{
+    height: auto;
+}
+.statusExterno{
+    height: auto;
+}
+.rowPagination{
+    vertical-align: middle;
+    background-color: white;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+    height: 3rem
+}

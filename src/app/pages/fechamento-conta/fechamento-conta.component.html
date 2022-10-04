@@ -1,0 +1,71 @@
+<body>
+    <section class="sectionFechamento">
+        <h1>Fechamento de Conta</h1>
+        <form [formGroup]="formularioFechamento" class="formFechamento">
+            <div>
+                <h2>Informações de Pagamento</h2>
+            </div>
+            <div class="linhaDupla">
+                <div class="inputValor">
+                    <div>
+                        <label for="pagamentoValor">Valor</label>
+                    </div>
+                    <div>
+                        <!--Input com máscara de moeda-->
+                        <input currencyMask 
+                        id="pagamentoValor" 
+                        type="text" 
+                        formControlName="pagamentoValor"
+                        [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }">
+                    </div>
+                    <div *ngIf="formularioFechamento.get('pagamentoValor')?.errors?.['required'] && formularioFechamento.get('pagamentoValor')?.touched">
+                        <p class="validacaoErro">Informe o valor (R$)</p>
+                    </div>
+                </div>
+                <div class="inputConcluido">
+                    <div>
+                        <label id="pagamentoStatus">Concluído</label>
+                    </div>
+                    <div>
+                        <mat-slide-toggle id="pagamentoStatus" [color]= 'color' formControlName="pagamentoStatus"></mat-slide-toggle>    
+                    </div>
+                </div>
+            </div>
+            <div class="linhaSimples">
+                <div>
+                    <label for="pagamentoDescricao">Descrição</label>
+                </div>
+                <div>
+                    <input id="pagamentoDescricao" type="text" formControlName="pagamentoDescricao">
+                </div>
+                <div *ngIf="formularioFechamento.get('pagamentoDescricao')?.errors?.['required'] && formularioFechamento.get('pagamentoDescricao')?.touched">
+                    <p class="validacaoErro">Informe a descrição do pagamento</p>
+                </div>
+            </div>
+            <div class="linhaSimples">
+                <div>
+                    <label for="pagamentoCategoria">Categoria</label>
+                </div>
+                <div>
+                    <input id="pagamentoCategoria" type="text" formControlName="pagamentoCategoria">
+                </div>
+                <div *ngIf="formularioFechamento.get('pagamentoCategoria')?.errors?.['required'] && formularioFechamento.get('pagamentoCategoria')?.touched">
+                    <p class="validacaoErro">Informe a categoria do pagamento</p>
+                </div>
+            </div>
+            <div class="linhaSimples">
+                <div>
+                    <label id="pagamentoVencimento">Vencimento</label>
+                </div>
+                <div>
+                    <input type="date" id="pagamentoVencimento" style=" text-align: center;" formControlName="pagamentoVencimento">
+                </div>
+            </div>
+            <div class="linhaBotao">
+                <input class="btn bntCadastrar" type="submit" [disabled]="!formularioFechamento.valid" (click)="cadastrarPagamento()" value="Cadastrar">
+            </div>
+       </form>
+    </section>
+</body>
+
+

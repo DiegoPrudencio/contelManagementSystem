@@ -6,4 +6,8 @@ export interface Reserva {
     observacaoReserva: string;
     cpfHospede: number;
     codigoUnidadeHoteleira: string;
+    idReserva:string;
+    nomeHospede:string;
+    quarto: string;
+    status:string;
 }
