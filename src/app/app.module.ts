@@ -1,6 +1,15 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule } from "ngx-mask";
+
+import { AppComponent } from './app.component';
+import { LoginComponent } from './pages/login/login.component';
+import { MapaDeReservasComponent } from './pages/mapa-de-reservas/mapa-de-reservas.component';
+import { CadastroDeReservasComponent } from './pages/cadastro-de-reservas/cadastro-de-reservas.component';
+import { CadastroDeUnidadeHoteleiraComponent } from './pages/cadastro-de-unidade-hoteleira/cadastro-de-unidade-hoteleira.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -15,6 +24,14 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
   declarations: [
     AppComponent,
     LoginComponent,
+    MapaDeReservasComponent,
+    CadastroDeReservasComponent,
+    CadastroDeUnidadeHoteleiraComponent
+  ],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot()
     PainelControleComponent,
     FechamentoContaComponent, 
   ],
@@ -31,3 +48,4 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

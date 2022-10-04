@@ -1,0 +1,184 @@
+.page {
+    height: fit-content;
+    background-color: #274C77;
+}
+
+/*Menu Principal*/
+.menu {
+    background-color: #E7ECEF;
+}
+
+.menu h1 {
+    font-weight: bolder;
+    font-size: 36px;
+}
+
+.menubtn:hover {
+    background-color: #34C096;
+}
+
+.menubtn button {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    text-align: start;
+    border: none;
+}
+
+.menubtn button:focus {
+    border: none;
+    outline: none;
+}
+
+/*Titulo Mapa de Reservas*/
+.map h1 {
+    font-size: 56px;
+    color: #ffffff;
+}
+
+/*Seção de botões Mapa de Reserva*/
+.mapbtns button {
+    background-color: #34C096;
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid black;
+}
+
+.mapbtns button:hover {
+    background-color: #3ad8a9;
+}
+
+.weekbtn img {
+    width: 1.5rem;
+}
+
+.weektxt {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: auto 0;
+}
+
+/*Calendário Mapa de Reservas*/
+.calendarbg {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
+
+.calendarRooms {
+    background-color: #ffffff;
+    color: #274C77;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #000000;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.calendarWeekday {
+    background-color: #274C77;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #000000;
+}
+
+.percentageOccupation {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.day {
+    font-size: 2.2em;
+}
+
+.selectRooms {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.form-select {
+    color: #274C77;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: none;
+}
+
+.roomsInfo {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.availableRooms {
+    color: #35B53B;
+    border: 1px solid #35B53B;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.rooms {
+    height: 12rem;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.roomsContent {
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 30px;
+    box-sizing: content-box;
+}
+
+.room {
+    color: #274C77;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.roomDay {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    height: 4em;
+}
+
+.labels {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.label1 {
+    background-color: yellow;
+    height: 25px;
+    width: 20px;
+    border-radius: 7px;
+}
+
+.label2 {
+    background-color: blue;
+    height: 25px;
+    width: 20px;
+    border-radius: 7px;
+}
+
+.label3 {
+    background-color: green;
+    height: 25px;
+    width: 20px;
+    border-radius: 7px;
+}
+
+.label4 {
+    background-color: red;
+    height: 25px;
+    width: 20px;
+    border-radius: 7px;
+}
+

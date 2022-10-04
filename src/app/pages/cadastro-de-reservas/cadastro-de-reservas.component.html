@@ -1,0 +1,204 @@
+<div class="page container-fluid h-100">
+
+    <div class="row h-100">
+
+        <div class="menu col-2 m-0 py-4">
+            <div class="row text-center mb-3">
+                <h1>Menu</h1>
+            </div>
+            <div class="menubtn row">
+                <button type="button" class="btn col-10">Painel de Controle</button>
+            </div>
+            <div class="menubtn row">
+                <button type="button" class="btn col-10">Mapa de Reserva</button>
+            </div>
+            <div class="menubtn row">
+                <button type="button" class="btn col-10">Caixa</button>
+            </div>
+            <div class="menubtn row">
+                <button type="button" class="btn col-10">Configurações</button>
+            </div>
+        </div>
+
+        <div class="map col-10">
+            <div class="row mt-3 mb-0 py-3">
+                <div class="col-12 text-center">
+                    <h1>Cadastro de Reservas</h1>
+                </div>
+            </div>
+
+            <div class="registerbg row mx-5 mb-3 py-3">
+
+                <form class="row" [formGroup]="formularioCadastroReservas">
+                    <div class="col-6">
+
+                        <div class="row">
+                            <h3>Nova Reserva</h3>
+                        </div>
+                        
+                        <div class="row mx-0 mt-2">
+                            <label for="idNomeHospede" class="ps-1">Nome do Hóspede</label>
+                            <input type="text" class="form-control" id="idNomeHospede" formControlName="nome">
+                            <div *ngIf="nome?.errors?.['required'] && nome?.touched" class="ps-1">
+                                Informe o nome do hóspede!
+                            </div>
+                        </div>            
+                        
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <label for="idCpf" class="ps-1">CPF</label>
+                                <input type="text" class="form-control" id="idCpf" formControlName="cpf" mask="000.000.000-00" [showMaskTyped]="true">
+                                <div *ngIf="cpf?.errors?.['required'] && cpf?.touched" class="ps-1">
+                                    Informe o CPF do hóspede!
+                                </div>
+                                <div *ngIf="cpf?.errors?.['minlength'] && cpf?.touched" class="ps-1">
+                                    Informe um CPF válido!
+                                </div>
+                            </div>
+    
+                            <div class="col-6">
+                                <label for="idDataNascimento" class="ps-1">Data de Nascimento</label>
+                                <input type="date" id="idDataNascimento" formControlName="dataNascimento">
+                                <div *ngIf="dataNascimento?.errors?.['required'] && dataNascimento?.touched" class="ps-1">
+                                    Informe a data de nascimento do hóspede!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mx-0 mt-2">
+                            <label for="idEmail" class="ps-1">E-mail</label>
+                            <input type="email" class="form-control" id="idEmail"  placeholder="exemplo@email.com" formControlName="email">
+                            <div *ngIf="email?.errors?.['required'] && email?.touched" class="ps-1">
+                                Informe o email do hóspede!
+                            </div>
+                            <div *ngIf="email?.errors?.['email'] && email?.touched" class="ps-1">
+                                O email informado não é válido!
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <label for="idTelefone" class="ps-1">Telefone</label>
+                                <input type="text" class="form-control" id="idTelefone" formControlName="telefone" prefix="+55" mask=" (00) 00000-0000" [showMaskTyped]="true">
+                                <div *ngIf="telefone?.errors?.['required'] && telefone?.touched" class="ps-1">
+                                    Informe o telefone do hóspede!
+                                </div>
+                                <div *ngIf="telefone?.errors?.['minlength'] && telefone?.touched" class="ps-1">
+                                    Informe um telefone válido!
+                                </div>
+                            </div>
+    
+                            <div class="col-6">
+                                <label for="idCep" class="ps-1">CEP</label>
+                                <input type="text" class="form-control" id="idCep" formControlName="cep" mask="00000-000" [showMaskTyped]="true">
+                                <div *ngIf="cep?.errors?.['minlength'] && cep?.touched" class="ps-1">
+                                    Informe um cep válido!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mx-0 mt-2">
+                            <label for="idRua" class="ps-1">Rua</label>
+                            <input type="text" class="form-control" id="idRua" formControlName="rua">
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <label for="idBairro" class="ps-1">Bairro</label>
+                                <input type="text" class="form-control" id="idBairro" formControlName="bairro">
+                            </div>
+    
+                            <div class="col-6">
+                                <label for="idCidade" class="ps-1">Cidade</label>
+                                <input type="text" class="form-control" id="idCidade" formControlName="cidade">
+                            </div>
+                        </div>
+
+                                   
+                    </div>
+    
+                    
+                    <div class="col-6 ps-4">
+                        
+                        <div class="row mt-5">
+                            <label class="ps-2">Situação</label>
+                            <div class="form-check w-auto pt-2 ps-3 ms-3">
+                                <input class="form-check-input" type="radio" name="situacao" id="idPreReservado" value="pre-reservado" formControlName="situacao">
+                                <label class="form-check-label ps-0" for="idPreReservado">Pré-Reservado</label>
+                            </div>
+                            
+                            <div class="form-check w-auto pt-2 ps-4 ms-4">
+                                <input class="form-check-input" type="radio" name="situacao" id="idReservado" value="reservado" formControlName="situacao">
+                                <label class="form-check-label ps-0" for="idReservado">Reservado</label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+
+                            <div class="col">
+                                <label for="idNumeroHospedes">Número de Hóspedes</label>
+                                <select class="form-select pe-0" id="idNumeroHospedes" formControlName="numeroHospedes">
+                                    <option value="0" disabled>Selecione a Quantidade</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <div *ngIf="numeroHospedes?.errors?.['min'] && numeroHospedes?.touched" class="ps-1">
+                                    Selecione o número de hóspedes!
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="idUnidadeHoteleira">Unidade Hoteleira</label>
+                                <select class="form-select" id="idUnidadeHoteleira" formControlName="codigoUnidadeHoteleira">
+                                    <option value="0" disabled>Selecione a Unidade</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <div *ngIf="codigoUnidadeHoteleira?.errors?.['min'] && codigoUnidadeHoteleira?.touched" class="ps-1">
+                                    Selecione a unidade hoteleira!
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <label for="idDataChegada">Data de Chegada</label>
+                                <input type="date" id="idDataChegada" formControlName="dataChegadaHospede">
+                                <div *ngIf="dataChegadaHospede?.errors?.['required'] && dataChegadaHospede?.touched" class="ps-1">
+                                    Selecione a data de chegada!
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="idDataSaida">Data de Saída</label>
+                                <input type="date" id="idDataSaida" formControlName="dataSaidaHospede">
+                                <div *ngIf="dataSaidaHospede?.errors?.['required'] && dataSaidaHospede?.touched" class="ps-1">
+                                    Selecione a data de saida!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="idObservacao" class="ps-0">Observação</label>
+                                <textarea class="form-control" id="idObservacao" rows="3" formControlName="observacaoReserva"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 pt-2">
+                            <div class="col d-flex justify-content-end">
+                                <button class="registerbtn btn w-auto" (click)="cadastrarReserva()" [disabled]="!formularioCadastroReservas.valid">Cadastrar</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+            
+            </div>
+        </div>
+
+    </div>
+</div>
