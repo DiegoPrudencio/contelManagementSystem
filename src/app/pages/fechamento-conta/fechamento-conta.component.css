@@ -1,0 +1,78 @@
+body{
+    background-color: #274c77;
+}
+.sectionFechamento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+}
+.formFechamento{
+    background-color: #D9D9D9;
+    max-width: 40rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+h1{
+    color: white;
+    font-size: 2.5rem;
+    padding:2rem 0 2rem 0;
+    text-align: center;
+    font-weight: bold;
+}
+h2{
+    padding-bottom: 1rem;
+    color: black;
+}
+input{
+    border-radius: 0.3rem;
+    width: 100%;
+}
+.linhaDupla{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 30rem;
+    width: 100%;
+}
+.linhaSimples{
+    padding: 0.3rem 0 0.3rem 0;
+}
+.linhaBotao{
+    align-self: flex-end;
+    padding: 1rem 0 0 0;
+}
+.bntCadastrar{
+    background-color: #34c096;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #274c77;
+    height: 2rem;
+    padding: 0 10px 0 10px;
+}
+.inputValor{
+    max-width: 15rem;
+    flex-grow: 1;
+}
+.inputConcluido{
+    flex-grow:0;
+}
+#pagamentoDescricao,#pagamentoCategoria{
+    max-width: 30rem;
+    width: 100%;
+    height: 2rem;
+}
+#pagamentoVencimento{
+    border-radius: 0.3rem;
+    height: 2rem;
+    max-width: 15rem;
+    width: 100%;
+}
+.validacaoErro{
+    color: #274c77;
+}
