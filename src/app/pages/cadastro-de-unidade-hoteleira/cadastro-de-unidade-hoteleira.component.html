@@ -1,0 +1,144 @@
+<div class="page container-fluid h-100">
+
+    <div class="row h-100">
+
+        <div class="menu col-2 m-0 py-4">
+            <div class="row text-center mb-3">
+                <h1>Menu</h1>
+            </div>
+            <div class="menubtn row">
+                <button type="button" class="btn col-10">Painel de Controle</button>
+            </div>
+            <div class="menubtn row">
+                <button type="button" class="btn col-10">Mapa de Reserva</button>
+            </div>
+            <div class="menubtn row">
+                <button type="button" class="btn col-10">Caixa</button>
+            </div>
+            <div class="menubtn row">
+                <button type="button" class="btn col-10">Configurações</button>
+            </div>
+        </div>
+
+        <div class="map col-10">
+            <div class="row mt-3 mb-2 py-3">
+                <div class="col-12 text-center">
+                    <h1>Cadastro de Unidade Hoteleira</h1>
+                </div>
+            </div>
+
+            <div class="registerbg row mx-auto py-3 w-50">
+
+                <form [formGroup]="formularioCadastroUnidadeHoteleira" class="row mx-auto">
+                    <div class="col">
+
+                        <div class="row">
+                            <h3>Nova Unidade Hoteleira</h3>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="form-group col-10">
+                                <label for="idCodigoUnidade">Código da Unidade</label>
+                                <input type="text" class="form-control w-25" id="idCodigoUnidade" formControlName="codigoUnidade">
+                               <div *ngIf="codigoUnidade?.errors?.['required'] && codigoUnidade?.touched">
+                                    Informe o código da unidade!
+                               </div>
+                               <div *ngIf="codigoUnidade?.errors?.['maxlength']">
+                                    O código da unidade deve ter no máximo 9 digitos!
+                            </div>
+                            </div>
+                        </div>      
+                        
+                        <div class="row mt-3">
+
+                            <div class="form-group col">
+                                <label for="idCodigoDiaria">Categoria da Unidade</label>
+                                <select class="form-select w-75" id="idCodigoDiaria" formControlName="codigoDiaria">
+                                    <option value="0" disabled>Selecione a Categoria</option>
+                                    <option value="1">Quarto Simples</option>
+                                    <option value="2">Quarto Duplos</option>
+                                    <option value="3">Quarto Triplos</option>
+                                </select>
+                                <div *ngIf="codigoDiaria?.errors?.['min'] && codigoDiaria?.touched">
+                                    Informe a categoria da unidade!
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col">
+                                <label for="idNumeroCamaDeCasal">Quantidade de Camas de Casal</label>
+                                <input type="number" class="form-control w-25" id="idNumeroCamaDeCasal" formControlName="quantidadeCamaCasal">
+                                <div *ngIf="quantidadeCamaCasal?.errors?.['required'] && quantidadeCamaCasal?.touched">
+                                    Informe a quantidade de camas de casal!
+                                </div>
+                                <div *ngIf="quantidadeCamaCasal?.errors?.['min']">
+                                    Mínimo: 0 camas
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label for="idNumeroCamaDeSolteiro">Quantidade de Camas de Solteiro</label>
+                                <input type="number" class="form-control w-25" id="idNumeroCamaDeSolteiro" formControlName="quantidadeCamaSolteiro">
+                                <div *ngIf="quantidadeCamaSolteiro?.errors?.['required'] && quantidadeCamaSolteiro?.touched">
+                                    Informe a quantidade de camas de solteiro!
+                                </div>
+                                <div *ngIf="quantidadeCamaSolteiro?.errors?.['min']">
+                                    Mínimo: 0 camas
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            
+                            <div class="form-group col-3">
+                                <label for="idValorDiaria">Valor da Diária</label>
+                                <div class="input-group mb-1">
+                                    <span class="input-group-text text-bg-dark border border-dark">%</span>
+                                    <input type="number" class="form-control" id="idValorDiaria" min="0" max="100" step="5" formControlName="porcentagemValorDiaria">
+                                </div>
+                                <div *ngIf="porcentagemValorDiaria?.errors?.['required']">
+                                    Informe a porcentagem!
+                                </div>
+                                <div *ngIf="porcentagemValorDiaria?.errors?.['min']">
+                                    Mínimo: 0%
+                                </div>
+                                <div *ngIf="porcentagemValorDiaria?.errors?.['max']">
+                                    Máximo: 100%
+                                </div>
+                            </div>
+                            <div class="form-group col mt-3">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="radio" value="true" name="isAcrescimo" id="idAcrescimoValorDiaria" formControlName="isAcrescimo" checked>
+                                    <label class="form-check-label" for="idAcrescimoValorDiaria">
+                                    Acréscimo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"  type="radio" value="false" name="isAcrescimo" id="idDescontoValorDiaria" formControlName="isAcrescimo">
+                                    <label class="form-check-label" for="idDescontoValorDiaria">
+                                    Desconto
+                                    </label>
+                                </div>
+                            </div>
+                                
+                        </div>
+
+                        
+                        <div class="row mt-4">
+                            <div class="col d-flex justify-content-end">
+                                <button class="registerbtn btn w-auto" (click)="cadastrarUnidadeHoteleira()" [disabled]="!formularioCadastroUnidadeHoteleira.valid">Cadastrar</button>
+                            </div> 
+                        </div>
+                                   
+                    </div>
+    
+                    
+                   
+                </form>
+            
+            </div>
+        </div>
+
+    </div>
+</div>
