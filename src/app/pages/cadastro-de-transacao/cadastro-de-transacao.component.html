@@ -1,0 +1,123 @@
+<div class="row screen">
+
+
+    <div class="collumnII">
+        <div class="trasation">
+            <div>
+                <h1 class="title">Cadastro de Transações</h1>
+            </div>
+
+            <div class="box">
+                <h3 class="h3CSS">Nova Transação</h3>
+
+                <form [formGroup]="formulario">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div><label class="form-label label" for="idAmount">Valor:</label></div>
+                                <div><input class="form-control input" type="text" id="idAmount"
+                                        formControlName="amount"></div>
+                            </div>
+                            <div class="form-text must"
+                                *ngIf="formulario.get('amount')?.errors?.['required'] && formulario.get('amount')?.touched" class="message">
+                                Valor obrigatório!
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="mb-3">
+                                <h5 class="form-label label">Tipo:</h5>
+                                <div class="row">
+                                    <div class="col checkboxReceipt">
+                                        <input type="radio" id="idReceipt" class="point" 
+                                        name="imageFirstType"
+                                        formControlName="imageFirstType" 
+                                        value="receita" ngmodel 
+                                        (change)="changeImageFirstType($event)">
+                                        <label for="typeReceipt">Receita</label>
+                                    </div>
+                                    <div class="col checkboxCost">
+                                        <input type="radio" id="idCost" class="point" 
+                                        name="imageFirstType" 
+                                        formControlName="imageFirstType" 
+                                        value="despesa" ngmodel
+                                        (change)="changeImageFirstType($event)">
+                                        <label class="point" for="css">Despesa</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div><label class="form-label label" for="idDescription">Descrição:</label></div>
+                                <div><input class="form-control input" type="text" id="idDescription"
+                                        formControlName="description"></div>
+                            </div>
+                            <div class="form-text must"
+                                *ngIf="formulario.get('description')?.errors?.['required'] && formulario.get('description')?.touched" class="message">
+                                Descrição obrigatória!
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div  class="form-check form-switch display">
+                                <div>
+                                    <h5 class="form-check-label label2">Concluído:</h5>
+                                </div>
+                                <div ><input class="form-check-input checkboxConcluded" type="checkbox" 
+                                    (change)="changeStatus($event)"
+                                    formControlName="isConcluded"
+                                    id="idConcluded"
+                                    name="isConcluded" value="false"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div><label class="form-label label" for="idCategory">Categoria:</label></div>
+                                <div><input class="form-control input" type="text" id="idCategory"
+                                        formControlName="category"></div>
+                            </div>
+                            <div class="form-text must"
+                                *ngIf="formulario.get('category')?.errors?.['required'] && formulario.get('category')?.touched" class="message">
+                                Categoria obrigatória!
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div>
+                                <div class="mb-3">
+                                    <label class="form-label label" for="idDueDate">Data de vencimento:</label>
+                                    <input type="date" class="form-control input input2" id="idDueDate"
+                                        formControlName="dueDate">
+                                </div>
+                                <div class="form-text must"
+                                    *ngIf="formulario.get('dueDate')?.errors?.['required'] && formulario.get('dueDate')?.touched" class="message">
+                                    Data de vencimento obrigatória!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="button1 col">
+                            <button class="btn btnCSS2" (click)="backTo()">Voltar</button>
+                        </div>
+                        <div class="button2 col">
+                            <button class="btn btnCSS2" (click)="cadastrar()" [disabled]="!formulario.valid">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</div>

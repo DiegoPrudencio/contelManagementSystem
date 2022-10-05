@@ -1,0 +1,69 @@
+<div class="row screen">
+
+    <div class="collumnII">
+        <div class="trasation">
+            <div>
+                <h1 class="title">Caixa - Despesas</h1>
+            </div>
+
+            <div id="divTable">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col"><button class="btn btnCSS" (click)="btnBack()">←</button></div>
+                            <div class="col">
+                                <h3 class="h3CSS">Setembro/22</h3>
+                            </div>
+                            <div class="col"><button class="btn btnCSS" (click)="btnNext()">→</button></div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <h2 class="h2CSS">Transações</h2>
+                    </div>
+
+                    <div class="col btnAlign">
+                        <button class="btn btnCSS2" (click)="newTransaction()"><a routerLink="cadastroDeTransacao">Nova Transação</a></button>
+                    </div>
+                </div>
+
+
+                <div class="col m-2 statusExterno">
+                    <div class="statusInterno">
+                        <table class="tabelaStatus">
+                            <tr class="mainBar">
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Discrição</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Vencimento</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Concluído</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                            <tbody>
+                                <tr *ngFor="let annotationBill of annotationBills">
+                                    <td><img class="sinalImage" src="./assets/minusImage.png" alt="Receita"></td>
+                                    <td>{{annotationBill.description}}</td>
+                                    <td>{{annotationBill.category}}</td>
+                                    <td>{{annotationBill.dueDate | date: 'dd/MM/yyyy'}}</td>
+                                    <td>{{annotationBill.amount}}</td>
+                                    <td><button class="btn" (click)="conclued()"> <div *ngIf="isConcluded; else other_content">
+                                        <img class="sinalImage" src="./assets/positiveImage.png" alt="Positivo">
+                                    </div>
+                                    <ng-template #other_content><img class="sinalImage" src="./assets/negativeImage.png" alt="Negativo"></ng-template></button></td>
+                                    <td><button class="btn"><img class="sinalImage" src="./assets/annotationImage.png" alt="Anotação"></button>
+                                        <button class="btn"><img class="sinalImage" src="./assets/garbageImage.png" alt="Excluir"></button></td>
+                                </tr>
+                            </tbody>                       
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button1 col">
+            <button class="btn btnCSS2" (click)="backTo()">Voltar</button>
+        </div>
+    </div>
+    <router-outlet></router-outlet> 
+</div>

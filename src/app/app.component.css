@@ -1,0 +1,24 @@
+.screen {
+    /* margin: 0%;
+    padding: 0%;
+    border: 0%; */
+    height: 45.3rem;
+    width: 100%
+}
+
+.collumnII {
+    width: 100%;
+    background-color: #274C77;
+}
+
+.logoImage {
+    border-radius: 50%;
+    width: 190px;
+    margin: 20% 0% 0% 6.5%;
+}
+
+.menu {
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10%;
+}
