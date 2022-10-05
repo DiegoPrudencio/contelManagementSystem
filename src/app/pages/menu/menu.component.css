@@ -1,0 +1,44 @@
+/* /Menu Principal/ */
+.menu {
+    background-color: #E7ECEF;
+}
+
+.menu h1 {
+    font-weight: bolder;
+    font-size: 36px;
+}
+
+.menubtn:hover {
+    background-color: #34C096;
+}
+
+.menubtn button {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-left: 15%;
+    text-align: start;
+    border: none;
+}
+
+.menubtn button:focus {
+    border: none;
+    outline: none;
+}
+
+.logoImage {
+    border-radius: 50%;
+    width: 160px;
+    margin: 10% 0% 13% 15%;
+}
+
+.screen {
+    height: 45.3rem;
+}
+
+.collumnII {
+    width: 100%;
+    background-color: #274C77;
+    padding: 0%;
+    margin: 0%;
+    border: 0ch;
+}

@@ -1,0 +1,130 @@
+.screen {
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.logoImage {
+    border-radius: 50%;
+    width: 190px;
+    margin: 20% 0% 0% 6.5%;
+}
+
+.menu {
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10%;
+}
+
+.collumnII {
+    width: 100%;
+    /* margin-left:20%; */
+    background-color: #274C77;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: 60px;
+}
+
+/* Tabela */
+
+
+.btnCSS2 {
+    border: 1px solid #274c77;
+    background-color: #34C096;
+    text-align: center;
+    font-size: 27px;
+    color: currentColor;
+    height: 4rem;
+    width: 20rem;
+    text-decoration: none;
+}
+
+.buttons {
+    margin-top: 3%;
+}
+
+.btnAlign{
+    text-align: center;
+    margin: 10% 1% 0% 0%;
+    text-decoration: none;
+}
+
+.h3CSS {
+    margin: 8% 0% 0% 0%;
+}
+
+.h2CSS {
+    text-align: center;
+    margin-top: 4%;
+    margin-left: 40%;
+}
+
+th {
+ color: white;
+}
+
+td,th{
+    padding: 0.5rem;
+    border: 1px solid #274c77;
+    border-right-color: transparent;
+}
+
+.statusInterno{
+    height: 10rem;
+    overflow-y: auto;
+    min-height: 10rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+
+
+.financialResume {
+    margin: 5% 8% 0% 0%;
+    border-radius: 50%;
+}
+
+.table2 {
+    text-align: center;
+}
+
+.tabelaStatus2{
+    background-color: #D9D9D9;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 3%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.colorLine {
+    background-color: #FFFFFF;
+}
+
+.mainBar2 {
+    border-radius: 3%;
+    width: 100%;
+}
+
+.sizeTable {
+    font-size: x-large;
+    color: black;
+}
+
+.sinalImage {
+    width: 30px;
+    background-color: transparent;
+}

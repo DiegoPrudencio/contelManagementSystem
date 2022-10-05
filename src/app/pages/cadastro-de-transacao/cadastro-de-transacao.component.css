@@ -1,0 +1,167 @@
+.screen {
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.logoImage {
+    border-radius: 50%;
+    width: 190px;
+    margin: 20% 0% 0% 6.5%;
+}
+
+.menu {
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10%;
+}
+
+.collumnII {
+    width: 100%;
+    /* margin-left:20%; */
+    background-color: #274C77;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: 50px;
+}
+
+
+.box {
+    background-color: #D9D9D9;
+    border-radius: 0.5rem;
+    margin: 0% 10% 0% 10%;
+    border: 1px solid #274c77;
+}
+
+.btnCSS {
+    border: 1px solid #274c77;
+    background-color: #34C096;
+    margin: 20% 0% 20% 15%;
+    color: white;
+}
+
+.button1 {
+    text-align: start;
+    margin: 5% 5% 5% 9%;
+}
+
+.button2 {
+    text-align: end;
+    margin: 5% 9% 5% 5%;
+}
+
+.btnCSS2 {
+    border: 1px solid #274c77;
+    background-color: #34C096;
+    text-align: end;
+    color: white;
+}
+
+.btnAlign{
+    text-align: end;
+    margin: 1% 1% 0% 0%;
+}
+
+.h3CSS {
+    margin: 3% 3% 3% 3%;
+}
+
+.h2CSS {
+    text-align: center;
+    margin-top: 4%;
+    margin-left: 40%;
+}
+
+.label {
+    font-size: large;
+    margin: 0% 0% 1% 6%;
+    font-weight: bold;
+}
+
+.label2 {
+    font-size: large;
+    font-weight: bold;
+    margin: 0% 0% 1% -18%;
+}
+
+.display {
+    display: flex;
+
+}
+
+.checkboxConcluded {
+    margin: 10% 0% 1% 0%;
+}
+
+.input{
+    margin: 0% 0% 0% 6%;
+    width: 75%;
+}
+
+.input2{
+    height: 2.3rem;
+}
+
+.checkboxReceipt {
+    margin: 2% 0% 0% 10%;
+}
+
+.checkboxCost {
+    margin: 2% 0% 0% -30%;
+}
+
+.point {
+    margin-right: 3%;
+}
+
+.table2 {
+    text-align: center;
+}
+
+.message {
+    margin: -3% 0% 3% 7%;
+    font-size: small;
+}
+
+.tabelaStatus2{
+    background-color: #D9D9D9;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 3%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.colorLine {
+    background-color: #FFFFFF;
+}
+
+.mainBar2 {
+    border-radius: 3%;
+    width: 100%;
+}
+
+.sizeTable {
+    font-size: x-large;
+    color: black;
+}
+
+.sinalImage {
+    width: 30px;
+    background-color: transparent;
+}

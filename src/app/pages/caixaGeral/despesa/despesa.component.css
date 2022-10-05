@@ -1,0 +1,119 @@
+.screen {
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.collumnII {
+    width: 100%;
+    /* margin-left:20%; */
+    background-color: #274C77;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: 60px;
+}
+
+
+.tabelaStatus{
+    background-color: #D9D9D9;
+    border-collapse: collapse;
+    border-style: hidden;
+    width: 100%;
+    border-radius: 0rem 0rem 1rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+td,th{
+    padding: 0.5rem;
+}
+
+tr{
+    height: 2.55rem;
+    min-height: 2.55rem; 
+    
+}
+
+.mainBar {
+    background-color: #34C096;
+    padding: 0%;
+    margin: 0%;
+}
+
+#divTable{
+    background-color: #D9D9D9;
+    border-radius: 0.5rem;
+    margin: 0% 3% 0% 3%;
+    border: 1px solid #274c77;
+}
+
+.btnCSS {
+    border: 1px solid #274c77;
+    background-color: #34C096;
+    margin: 20% 0% 20% 15%;
+    color: white;
+}
+
+.btnCSS2 {
+    border: 1px solid #274c77;
+    background-color: #34C096;
+    text-align: end;
+    color: white;
+}
+
+.button1 {
+    justify-content: end;
+    margin: 25% 0% 0% 3%;
+}
+
+.btnAlign{
+    text-align: end;
+    margin: 1% 1% 0% 0%;
+}
+
+.h3CSS {
+    margin: 8% 0% 0% 0%;
+}
+
+.h2CSS {
+    text-align: center;
+    margin-top: 4%;
+    margin-left: 40%;
+}
+
+th {
+ color: white;
+}
+
+td,th{
+    padding: 0.5rem;
+    border: 1px solid #274c77;
+    border-right-color: transparent;
+}
+
+.statusInterno{
+    height: 10rem;
+    overflow-y: auto;
+    min-height: 10rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+
+.statusExterno{
+    max-height: 10rem;
+    height: 10rem;
+    min-height: 10rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+    padding: 0%;
+}
+
+.sinalImage {
+    width: 30px;
+    background-color: transparent;
+}
