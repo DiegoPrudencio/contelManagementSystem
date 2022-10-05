@@ -1,0 +1,27 @@
+<div class="m-2 text-center">
+    <h1>Configurações</h1>
+</div>
+<div class="mx-auto my-4 divWidth">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+            <a ngbNavLink class="link-secondary navColor navBorder">Configurações Usuário</a>
+            <ng-template ngbNavContent>
+                <app-config-usuario></app-config-usuario>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+            <a ngbNavLink class="link-secondary navColor navBorder">Configurações Hotel</a>
+            <ng-template ngbNavContent>
+                <app-config-hotel></app-config-hotel>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+            <a ngbNavLink class="link-secondary navColor navBorder navBorderRight">Configurações Diárias</a>
+            <ng-template ngbNavContent>
+                <app-config-diaria></app-config-diaria>
+            </ng-template>
+        </li>
+    </ul>
+      
+    <div [ngbNavOutlet]="nav" class="border border-dark rounded-bottom corFundoForm"></div>
+</div>

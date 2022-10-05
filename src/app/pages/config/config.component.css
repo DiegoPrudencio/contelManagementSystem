@@ -1,0 +1,25 @@
+.divWidth{
+    width: 600px;
+}
+.corFundoForm{
+    background-color: #D9D9D9;
+}
+.navColor{
+    background-color: #34C096 !important;
+    color: white !important;
+}
+.navColor:hover{
+    background-color: rgb(47, 167, 131) !important;
+    color: white!important;
+}
+.navBorder{
+    border-color: black !important;
+    border-bottom: none !important;
+    border-right: none !important;
+}
+.navBorderRight{
+    border-right: 1px black solid !important;
+}
+
+
+

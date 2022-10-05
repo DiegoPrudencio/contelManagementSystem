@@ -1,0 +1,108 @@
+<form [formGroup]="formulario">
+    <div class="p-2 mx-2">
+        <h4>Configurações Hotel</h4>
+    </div>
+    <div class="container-fluid mx-auto row">
+        <div class="col pb-2">
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="idNomeHotel">Nome de Hotel</label>
+                <input class="form-control" type="text" id="idNomeHotel" formControlName="nomeHotel" placeholder="Nome Hotel...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('nomeHotel')?.errors?.['required'] && formulario.get('nomeHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="idEmailHotel">Email</label>
+                <input class="form-control" type="text" id="idEmailHotel" formControlName="emailHotel" placeholder="Email...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('emailHotel')?.errors?.['required'] && formulario.get('emailHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+            <div *ngIf="formulario.get('emailHotel')?.errors?.['email'] && formulario.get('emailHotel')?.touched">
+                <p class="text-danger m-0">Isto não é um email</p>
+            </div>
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="">Site</label>
+                <input class="form-control" type="text" id="idSiteHotel" formControlName="siteHotel" placeholder="Site...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('siteHotel')?.errors?.['required'] && formulario.get('siteHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="idRuaHotel">Rua</label>
+                <input class="form-control" type="text" id="idRuaHotel" formControlName="ruaHotel" placeholder="Rua...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('ruaHotel')?.errors?.['required'] && formulario.get('ruaHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="">Bairro</label>
+                <input class="form-control" type="text" id="idBairroHotel" formControlName="bairroHotel" placeholder="Bairro...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('bairroHotel')?.errors?.['required'] && formulario.get('bairroHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+        </div>
+        <div class="col pb-2">
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="">CNPJ</label>
+                <input class="form-control" type="text" id="idCnpjHotel" formControlName="cnpjHotel" placeholder="CNPJ...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('cnpjHotel')?.errors?.['required'] && formulario.get('cnpjHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="">Contato Telefônico</label>
+                <input class="form-control" type="text" id="idTelefoneHotel" formControlName="telefoneHotel" placeholder="Telefone...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('telefoneHotel')?.errors?.['required'] && formulario.get('telefoneHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="">CEP</label>
+                <input class="form-control" type="text" id="idCepHotel" formControlName="cepHotel" placeholder="CEP...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('cepHotel')?.errors?.['required'] && formulario.get('cepHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="">Número</label>
+                <input class="form-control" type="text" id="idNumeroHotel" formControlName="numeroHotel" placeholder="Número...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('numeroHotel')?.errors?.['required'] && formulario.get('numeroHotel')?.touched">
+                <p class="text-danger m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+            <div class="pb-1 input-group-sm">
+                <label class="form-label m-0 p-0 tamanhoText" for="">Cidade</label>
+                <input class="form-control" type="text" id="idCidadeHotel" formControlName="cidadeHotel" placeholder="Cidade...">
+            </div>
+            <!-- Validação do campo acima -->
+            <div *ngIf="formulario.get('cidadeHotel')?.errors?.['required'] && formulario.get('cidadeHotel')?.touched">
+                <p class="text-danger  m-0">Campo obrigatório</p>
+            </div>
+<!--     -->
+            <div  class="pb-1 d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="button" class="btn fundoBtn tamanhoText">Salvar</button>
+            </div>
+        </div>
+    </div>
+</form>
