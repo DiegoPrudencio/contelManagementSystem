@@ -73,6 +73,10 @@ export class CadastroDeReservasComponent implements OnInit {
     }
 
     this.reservaCadastrada = {
+      idReserva:'',
+      nomeHospede:'',
+      quarto: '',
+      status:'',
       situacao: this.situacao?.value,
       numeroHospedes: this.numeroHospedes?.value,
       dataChegadaHospede: this.dataChegadaHospede?.value,
