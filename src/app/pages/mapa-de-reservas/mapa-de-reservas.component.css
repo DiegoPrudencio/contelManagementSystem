@@ -4,7 +4,7 @@
 }
 
 /*Menu Principal*/
-.menu {
+/* .menu {
     background-color: #E7ECEF;
 }
 
@@ -25,12 +25,17 @@
     border: none;
 }
 
+
 .menubtn button:focus {
     border: none;
     outline: none;
-}
+} */
 
 /*Titulo Mapa de Reservas*/
+.map {
+    width: 100%;
+}
+
 .map h1 {
     font-size: 56px;
     color: #ffffff;

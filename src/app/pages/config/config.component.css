@@ -1,5 +1,5 @@
 .divWidth{
-    width: 600px;
+    width: 900px;
 }
 .corFundoForm{
     background-color: #D9D9D9;
@@ -21,5 +21,11 @@
     border-right: 1px black solid !important;
 }
 
+.title {
+    text-align: center;
+    color: white;
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: 60px;
+}
 
 

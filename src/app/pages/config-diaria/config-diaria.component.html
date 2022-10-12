@@ -7,7 +7,7 @@
         <div class="row">
             <div class="pb-1 input-group-sm">
                 <label class="form-label p-0 m-0 tamanhoText" for="">Nome da Categoria</label>
-                <select class="form-select">
+                <select class="form-select margin">
                     <option value="Quarto Simples">Quarto Simples</option>
                     <option value="Quarto Duplo">Quarto Duplo</option>
                     <option value="Quarto Triplo">Quarto Triplo</option>
@@ -22,38 +22,38 @@
 <!--     -->
                 <div class="pb-1 input-group-sm">
                     <label class="form-label p-0 m-0 tamanhoText" for="">Segunda-feira</label>
-                    <input class="form-control" type="text" id="idSegFeiraDiaria"  formControlName="segFeiraDiaria" placeholder="R$...">
+                    <input class="form-control margin" type="text" id="idSegFeiraDiaria"  formControlName="segFeiraDiaria" placeholder="R$...">
                 </div>
                 <!-- Validação do campo acima -->
                 <div *ngIf="formulario.get('segFeiraDiaria')?.errors?.['required'] && formulario.get('segFeiraDiaria')?.touched">
-                    <p class="text-danger m-0">Campo obrigatório</p>
+                    <p class="text-danger">Campo obrigatório</p>
                 </div>
 <!--     -->
                 <div class="pb-1 input-group-sm">
                     <label class="form-label p-0 m-0 tamanhoText" for="">Terça-feira</label>
-                    <input class="form-control" type="text" id="idTerFeiraDiaria" formControlName="terFeiraDiaria" placeholder="R$...">
+                    <input class="form-control margin" type="text" id="idTerFeiraDiaria" formControlName="terFeiraDiaria" placeholder="R$...">
                 </div>
                 <!-- Validação do campo acima -->
                 <div *ngIf="formulario.get('terFeiraDiaria')?.errors?.['required'] && formulario.get('terFeiraDiaria')?.touched">
-                    <p class="text-danger m-0">Campo obrigatório</p>
+                    <p class="text-danger">Campo obrigatório</p>
                 </div>
 <!--     -->
                 <div class="pb-1 input-group-sm">
                     <label class="form-label p-0 m-0 tamanhoText" for="">Quarta-feira</label>
-                    <input class="form-control" type="text" id="idQuaFeiraDiaria" formControlName="quaFeiraDiaria" placeholder="R$...">
+                    <input class="form-control margin" type="text" id="idQuaFeiraDiaria" formControlName="quaFeiraDiaria" placeholder="R$...">
                 </div>
                 <!-- Validação do campo acima -->
                 <div *ngIf="formulario.get('quaFeiraDiaria')?.errors?.['required'] && formulario.get('quaFeiraDiaria')?.touched">
-                    <p class="text-danger m-0">Campo obrigatório</p>
+                    <p class="text-danger">Campo obrigatório</p>
                 </div>
 <!--     -->
                 <div class="pb-1 input-group-sm">
                     <label class="form-label p-0 m-0 tamanhoText" for="">Quinta-feira</label>
-                    <input class="form-control" type="text" id="idQuiFeiraDiaria" formControlName="quiFeiradiaria" placeholder="R$...">
+                    <input class="form-control margin" type="text" id="idQuiFeiraDiaria" formControlName="quiFeiradiaria" placeholder="R$...">
                 </div>
                 <!-- Validação do campo acima -->
                  <div *ngIf="formulario.get('quiFeiradiaria')?.errors?.['required'] && formulario.get('quiFeiradiaria')?.touched">
-                    <p class="text-danger m-0">Campo obrigatório</p>
+                    <p class="text-danger">Campo obrigatório</p>
                 </div>
 <!--     -->
             </div>
@@ -61,29 +61,29 @@
 <!--     -->
                 <div class="pb-1 input-group-sm">
                     <label class="form-label p-0 m-0 tamanhoText" for="">Sexta-feira</label>
-                    <input class="form-control" type="text" id="idSexFeiraDiaria" formControlName="sexFeiraDiaria" placeholder="R$...">
+                    <input class="form-control margin" type="text" id="idSexFeiraDiaria" formControlName="sexFeiraDiaria" placeholder="R$...">
                 </div>
                 <!-- Validação do campo acima -->
                 <div *ngIf="formulario.get('sexFeiraDiaria')?.errors?.['required'] && formulario.get('sexFeiraDiaria')?.touched">
-                    <p class="text-danger m-0">Campo obrigatório</p>
+                    <p class="text-danger">Campo obrigatório</p>
                 </div>
 <!--     -->
                 <div class="pb-1 input-group-sm">
                     <label class="form-label p-0 m-0 tamanhoText" for="">Sabado</label>
-                    <input class="form-control" type="text" id="idSabDiaria" formControlName="sabDiaria" placeholder="R$...">
+                    <input class="form-control margin" type="text" id="idSabDiaria" formControlName="sabDiaria" placeholder="R$...">
                 </div>
                 <!-- Validação do campo acima -->
                 <div *ngIf="formulario.get('sabDiaria')?.errors?.['required'] && formulario.get('sabDiaria')?.touched">
-                    <p class="text-danger m-0">Campo obrigatório</p>
+                    <p class="text-danger">Campo obrigatório</p>
                 </div>
 <!--     -->
                 <div class="pb-1 input-group-sm">
                     <label class="form-label p-0 m-0 tamanhoText" for="">Domingo</label>
-                    <input class="form-control" type="text" id="idDomDiaria" formControlName="domDiaria" placeholder="R$...">
+                    <input class="form-control margin" type="text" id="idDomDiaria" formControlName="domDiaria" placeholder="R$...">
                 </div>
                 <!-- Validação do campo acima -->
                 <div *ngIf="formulario.get('domDiaria')?.errors?.['required'] && formulario.get('domDiaria')?.touched">
-                    <p class="text-danger m-0">Campo obrigatório</p>
+                    <p class="text-danger">Campo obrigatório</p>
                 </div>
 <!--     -->
             </div>   
