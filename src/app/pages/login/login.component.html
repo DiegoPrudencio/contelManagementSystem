@@ -1,1 +1,89 @@
-<p>login works!</p>
+
+<div class="screen">
+    <div class="row">
+        <h1 class="firstTitle">CONTEL GESTÃO HOTELEIRA</h1>
+    </div>
+
+    <form class="row form" [formGroup]="formularioLogin">
+        <div> <!--class="col-6"-->
+
+            <div class="row">
+                <h1 class="secondTitle">Login</h1>
+            </div>
+
+            <div class="mb-3">
+                <div><label class="form-label label" for="idLogin">Usuário:</label></div>
+                <div><input class="form-control input" type="text" id="idLogin" formControlName="login"></div>
+            </div>
+            <div class="form-text must"
+                *ngIf="formularioLogin.get('login')?.errors?.['required'] && formularioLogin.get('login')?.touched"
+                class="message">
+                Informe o login de usuário!
+            </div>
+
+            <div class="mb-3">
+                <div><label class="form-label label" for="idPassword">Senha:</label></div>
+                <div><input class="form-control input" type="text" id="idPassword" formControlName="password"></div>
+            </div>
+            <div class="form-text must"
+                *ngIf="formularioLogin.get('password')?.errors?.['required'] && formularioLogin.get('password')?.touched"
+                class="message">
+                Informe a senha!
+            </div>
+
+            <div class="row">
+                <div class="col teste">
+                    <div class="row titleAlign">
+                        <div class="col teste2">
+                            <input class="form-check-input" type="checkbox" 
+                            id="idConcluded"
+                            name="isConcluded" value="false">
+                        </div>
+                        <div class="col teste3">
+                            <h6 class="thirdTitle">Lembrar Senha</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnAlign col">
+                    <button class="btn btnCSS2" (click)="logar()" [disabled]="!formularioLogin.valid">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="lineOptions">
+            <div>
+                <label class="label">Não tem uma conta? <a href="">Crie uma</a></label> 
+            </div>
+            <div>
+                <label class="label">Esqueceu sua senha? <a href="">Vamos alterar</a></label> 
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+
+<!-- <body>
+    <h1>CONTEL GESTÃO HOTELEIRA</h1>
+
+    <fieldset>
+        <legend>LOGIN</legend>
+        <label for="idUsuario">Usuario</label> <br>
+        <input type="text" id="idUsuario" > 
+
+        <br><br>
+        <label for="idSenha">Senha</label> <br>
+        <input type="text" id="idSenha" >  
+        
+        <br><br>
+        <input type="checkbox" id="idLembraSenha">
+        <label for="idLembraSenha">Lembrar a senha</label>
+
+        <button type="button">Login</button>
+        <br><br>
+        <a href="url">Cadastrar Novo Usuário</a>
+        <br><br>
+        <a href="url">Esqueceu a senha</a>
+    </fieldset>
+</body> -->
