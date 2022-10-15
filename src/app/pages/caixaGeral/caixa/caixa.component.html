@@ -11,15 +11,15 @@
                 <div class="col buttons">
 
                     <div class=" btnAlign">
-                        <button class="btn btnCSS2" (click)="receitas()"><a routerLink="/caixaGeral/caixa/receita">Receitas</a></button>
+                        <button class="btn btnCSS2"><a routerLink="/caixaGeral/caixa/receita">Receitas</a></button>
                     </div>
 
                     <div class=" btnAlign">
-                        <button class="btn btnCSS2" (click)="despesas()"><a routerLink="/caixaGeral/caixa/despesa">Despesas</a></button>
+                        <button class="btn btnCSS2"><a routerLink="/caixaGeral/caixa/despesa">Despesas</a></button>
                     </div>
 
                     <div class=" btnAlign">
-                        <button class="btn btnCSS2" (click)="newTransaction()"><a routerLink="/caixaGeral/caixa/cadastroDeTransacao">Nova
+                        <button class="btn btnCSS2"><a routerLink="/caixaGeral/caixa/cadastroDeTransacao">Nova
                                 Transação</a></button>
                     </div>
 
@@ -38,44 +38,44 @@
                                 <tbody>
                                     <tr>
                                         <td class="left">Receitas recebidas</td>
-                                        <td class="right" receiptReceived="receiptReceived">xxxx</td>
+                                        <td class="right">R$: {{receiptReceived}}</td>
                                     </tr>
                                 </tbody>
                                 <tbody>
                                     <tr>
                                         <td class="left">Receitas não recebidas</td>
-                                        <td class="right" receiptNotReceived="receiptNotReceived">xxxx</td>
+                                        <td class="right">R$: {{receiptNotReceived}}</td>
                                     </tr>
                                 </tbody>
                                 <tbody>
                                     <tr class="colorLine">
                                         <td class="left">TOTAL DE RECEITAS</td>
-                                        <td class="right">xxxx</td>
+                                        <td class="right">R$: {{finalReceiptReceived}}</td>
                                     </tr>
                                 </tbody>
 
                                 <tbody>
                                     <tr>
                                         <td class="left">Despesas pagas</td>
-                                        <td class="right">xxxx</td>
+                                        <td class="right">R$: {{paidCost}}</td>
                                     </tr>
                                 </tbody>
                                 <tbody>
                                     <tr>
                                         <td class="left">Despesas não pagas</td>
-                                        <td class="right">xxxx</td>
+                                        <td class="right">R$: {{unpaidCost}}</td>
                                     </tr>
                                 </tbody>
                                 <tbody>
                                     <tr class="colorLine">
                                         <td class="left">TOTAL DE DESPESAS</td>
-                                        <td class="right">xxxx</td>
+                                        <td class="right">R$: {{finalPaid}}</td>
                                     </tr>
                                 </tbody>
                                 <tbody>
                                     <tr style="font-weight: bold;">
                                         <td class="left">SALDO EM CAIXA</td>
-                                        <td class="right">xxxx</td>
+                                        <td class="right">R$: {{totalBalance}}</td>
                                     </tr>
                                 </tbody>
                             </table>

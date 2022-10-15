@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AnnotationBill } from 'src/app/interfaces/annotationBill';
 
@@ -8,53 +9,36 @@ import { AnnotationBill } from 'src/app/interfaces/annotationBill';
   styleUrls: ['./caixa.component.css']
 })
 export class CaixaComponent implements OnInit {
-  router: any;
+
+  receiptReceived: number = 0;
+  receiptNotReceived: number = 0;
+  finalReceiptReceived: number = 0;
+
+  paidCost: number = 0;
+  unpaidCost: number = 0;
+  finalPaid: number = 0;
+
+  totalBalance: number = 0;
 
   constructor() { }
 
-  annotationBills: AnnotationBill[] = [];
-  isAddition: string = "receita";
-  isConcluded: string = "sim";
-  receiptReceived: number = 0;
-  receiptNotReceived: number = 0;
+
 
   ngOnInit(): void {
+    
+    this.receiptNotReceived = 50
+    this.receiptReceived = 40
+    this.finalReceiptReceived = this.receiptReceived + this.receiptNotReceived
 
-      this.annotationBills = [
-        {
-          id: 1,
-          imageTypeUrl: 'receita',
-          description: 'Quarto 01',
-          category: 'Hospedagem',
-          dueDate: 'september, 4, 2022',
-          amount: 300.00,
-          isConcluded: false
-        },
-        {
-          id: 2,
-          imageTypeUrl: 'despesa',
-          description: 'Conta de luz',
-          category: 'Conta',
-          dueDate: 'december, 4, 2022',
-          amount: 150.00,
-          isConcluded: false
-        }
-      ]
+    this.paidCost = 60
+    this.unpaidCost = 80
+    this.finalPaid = this.paidCost + this.unpaidCost
+
+    this.totalBalance = this.finalReceiptReceived - this.finalPaid
 
   }
 
 
-receitas() {
-  this.router.navigate(['/caixaGeral/despesas']);
-}
-
-despesas() {
-
-}
-
-newTransaction() {
-
-}
 
 
 
