@@ -1,4 +1,41 @@
-<div class="row">
+<main>
+    <div class="row screen">
+  
+      <div class="collumnI">
+        <div class="row">
+            <div class=" col menu col-2 m-0 py-4 screen">
+                <img class="logoImage" src="./assets/contelLogo.jpeg" alt="">
+                <div class="row text-center mb-3">
+                    <h1>Menu</h1>
+                </div>
+                <div class="menubtn row">
+                    <button type="button" class="btn col-9"><a routerLink="/painelDeControle">Painel de Controle</a></button>
+                </div>
+                <div class="menubtn row">
+                    <button type="button" class="btn col-9"><a routerLink="/mapaDeReserva">Mapa de Reserva</a></button>
+                </div>
+                <div class="menubtn row">
+                    <button type="button" class="btn col-9"><a routerLink="/caixaGeral/caixa">Caixa</a></button>
+                </div>
+                <div class="menubtn row">
+                    <button type="button" class="btn col-9"><a routerLink="/configuracoes">Configurações</a></button>
+                </div>
+            </div>
+            <div class="col collumnII">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <!-- <app-menu></app-menu> -->
+      </div>
+  
+      <div class="collumnII">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </main>
+
+
+<!-- <div class="row">
     <div class=" col menu col-2 m-0 py-4 screen">
         <img class="logoImage" src="./assets/contelLogo.jpeg" alt="">
         <div class="row text-center mb-3">
@@ -20,4 +57,4 @@
     <div class="col collumnII">
         <router-outlet></router-outlet>
     </div>
-</div>
+</div> -->

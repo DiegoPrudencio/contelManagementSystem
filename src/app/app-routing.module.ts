@@ -9,11 +9,15 @@ import { CadastroDeTransacaoComponent } from './pages/cadastro-de-transacao/cada
 import { ReceitaComponent } from './pages/caixaGeral/receita/receita.component';
 import { DespesaComponent } from './pages/caixaGeral/despesa/despesa.component';
 import { ConfigComponent } from './pages/config/config.component';
+import { LoginComponent } from './pages/login/login.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' }, 
+  {path: '/', component: LoginComponent}, 
+  {path: 'menu', component: MenuComponent},
   {path: 'painelDeControle', component: PainelControleComponent}, 
   {path: 'mapaDeReserva', component: MapaDeReservasComponent}, 
   {path: 'caixaGeral/caixa', component: CaixaComponent}, 
