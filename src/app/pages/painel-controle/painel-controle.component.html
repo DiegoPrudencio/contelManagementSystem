@@ -7,7 +7,7 @@
             <div class="row sectionInfo">
                 <div class="col-4 cotacao">
                     <div>
-                        <select id="selectCotacao" (click)="infoMoeda();" [(ngModel)]="selectCotacao">
+                        <select id="selectCotacao" (click)="getCotacaoMoeda();" [(ngModel)]="selectCotacao">
                             <option value="dolar" >Dólar</option>
                             <option value="euro">Euro</option>
                         </select>
@@ -35,7 +35,7 @@
                     <p class="descricaoIndicador">RevPAR</p>
                 </div>
                 <div class="indicador col m-2">
-                    <p class="resultadoIndicador">R$ 0,00</p>
+                    <p class="resultadoIndicador">{{indicadores.receitas}}</p>
                     <p class="descricaoIndicador">Receitas</p>
                 </div>
                 <div class="indicador col m-2">
@@ -80,9 +80,9 @@
                              <tbody>
                                <tr *ngFor="let proximasChegadas of proximasChegadas | slice: (pageChegadas-1) * pageSize : pageChegadas * pageSize">
                                  <td>{{proximasChegadas.nomeHospede}}</td>
-                                 <td>{{proximasChegadas.quarto}}</td>
-                                 <td>{{proximasChegadas.status}}</td>
-                                 <td><button class="btn bntConsultaReserva" type="button" href="#" *ngIf="proximasChegadas.idReserva!='null'" (click)="detalharReserva(proximasChegadas.idReserva);">Ir para reserva</button></td>
+                                 <td>{{proximasChegadas.numQuarto}}</td>
+                                 <td>{{proximasChegadas.situacaoHospede}}</td>
+                                 <td><button class="btn bntConsultaReserva" type="button" href="#" *ngIf="proximasChegadas.codReserva!='null'" (click)="detalharReserva(proximasChegadas.codReserva);">Ir para reserva</button></td>
                                </tr>
                              </tbody>
                            </table>
@@ -91,6 +91,7 @@
                         <ngb-pagination class="d-flex justify-content-end" 
                             [(page)]="pageChegadas"
                             [pageSize]="pageSize"
+                            [maxSize]="4"
                             [collectionSize]="collectionSizeChegadas"
                             size="sm"
                             >
@@ -110,9 +111,9 @@
                             <tbody>
                             <tr *ngFor="let buscaReserva of proximasPartidas | slice: (pagePartidas-1) * pageSize : pagePartidas * pageSize">
                                 <td>{{buscaReserva.nomeHospede}}</td>
-                                <td>{{buscaReserva.quarto}}</td>
-                                <td>{{buscaReserva.status}}</td>
-                                <td><button class="btn bntConsultaReserva" type="button" href="#" *ngIf="buscaReserva.idReserva!='null'" (click)="detalharReserva(buscaReserva.idReserva);">Ir para reserva</button></td>
+                                <td>{{buscaReserva.numQuarto}}</td>
+                                <td>{{buscaReserva.situacaoHospede}}</td>
+                                <td><button class="btn bntConsultaReserva" type="button" href="#" *ngIf="buscaReserva.codReserva!='null'" (click)="detalharReserva(buscaReserva.codReserva);">Ir para reserva</button></td>
                             </tr>
                             </tbody>
                         </table>
@@ -121,6 +122,7 @@
                         <ngb-pagination class="d-flex justify-content-end" 
                             [(page)]="pagePartidas"
                             [pageSize]="pageSize"
+                            [maxSize]="4"
                             [collectionSize]="collectionSizePartidas"
                             size="sm"
                             >

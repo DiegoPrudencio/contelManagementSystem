@@ -1,5 +1,6 @@
 export interface Hospede {
-    nome: string;
+    nome:string;
+    nomeHospede: string;
     cpf: number;
     dataNascimento: Date;
     email: string;

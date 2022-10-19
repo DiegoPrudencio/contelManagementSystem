@@ -24,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './pages/menu/menu.component';
 import { ReceitaComponent } from './pages/caixaGeral/receita/receita.component';
 import { DespesaComponent } from './pages/caixaGeral/despesa/despesa.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { DespesaComponent } from './pages/caixaGeral/despesa/despesa.component';
     ReactiveFormsModule,
     CurrencyMaskModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent, 

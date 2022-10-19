@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { UnidadeHoteleira } from 'src/app/interfaces/unidade-hoteleira2';
 
-import { UnidadeHoteleira } from "src/app/interfaces/unidade-hoteleira";
 
 @Component({
   selector: 'app-cadastro-de-unidade-hoteleira',
