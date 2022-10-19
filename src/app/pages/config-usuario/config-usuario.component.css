@@ -1,6 +1,11 @@
 .fundoBtn{
     background-color: #34C096;
+    margin-bottom: 20px;
 }
 .tamanhoText{
-    font-size: 14px;
+    font-size: 19px;
+}
+
+.margin {
+    margin: 5px 0px 3px 0px;
 }

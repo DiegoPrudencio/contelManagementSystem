@@ -5,7 +5,8 @@
     background-color: #34C096;
 }
 .tamanhoText{
-    font-size: 14px;
+    font-size: 19px;
+    margin-bottom: 20px;
 }
 .divWidth{
     width: 520px;
@@ -16,5 +17,9 @@ tbody{
 }
 thead{
     background-color: #274C77;
+}
+
+.margin {
+    margin: 5px 0px 3px 0px;
 }
 

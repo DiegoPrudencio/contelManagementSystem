@@ -2,5 +2,11 @@
     background-color: #34C096;
 }
 .tamanhoText{
-    font-size: 14px;
+    font-size: 19px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.margin {
+    margin: 5px 0px 3px 0px;
 }
