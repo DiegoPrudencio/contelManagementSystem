@@ -33,12 +33,19 @@
 
 .screen {
     height: 45.3rem;
+    flex-direction:row;
 }
 
 .collumnII {
-    width: 100%;
+    flex-grow: 8;
     background-color: #274C77;
     padding: 0%;
     margin: 0%;
     border: 0ch;
+}
+.collumnI{
+    flex-grow:2;
+}
+.secao{
+    position: absolute;
 }
