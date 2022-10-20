@@ -15,8 +15,7 @@ import { MenuComponent } from './pages/menu/menu.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' }, 
-  {path: '/', component: LoginComponent}, 
+  {path: 'login', component: LoginComponent}, 
   {path: 'menu', component: MenuComponent},
   {path: 'painelDeControle', component: PainelControleComponent}, 
   {path: 'mapaDeReserva', component: MapaDeReservasComponent}, 
