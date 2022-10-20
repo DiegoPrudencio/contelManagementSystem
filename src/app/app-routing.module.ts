@@ -16,15 +16,15 @@ import { MenuComponent } from './pages/menu/menu.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' }, 
-  {path: '/', component: LoginComponent}, 
+  // {path: '/', component: LoginComponent}, 
   {path: 'menu', component: MenuComponent},
-  {path: 'painelDeControle', component: PainelControleComponent}, 
-  {path: 'mapaDeReserva', component: MapaDeReservasComponent}, 
-  {path: 'caixaGeral/caixa', component: CaixaComponent}, 
-  {path: 'caixaGeral/caixa/cadastroDeTransacao', component: CadastroDeTransacaoComponent},
-  {path: 'caixaGeral/caixa/receita', component: ReceitaComponent}, 
-  {path: 'caixaGeral/caixa/despesa', component: DespesaComponent}, 
-  {path: 'configuracoes', component: ConfigComponent}
+  {path: 'menu/painelDeControle', component: PainelControleComponent}, 
+  {path: 'menu/mapaDeReserva', component: MapaDeReservasComponent}, 
+  {path: 'menu/caixaGeral/caixa', component: CaixaComponent}, 
+  {path: 'menu/caixaGeral/caixa/cadastroDeTransacao', component: CadastroDeTransacaoComponent},
+  {path: 'menu/caixaGeral/caixa/receita', component: ReceitaComponent}, 
+  {path: 'menu/caixaGeral/caixa/despesa', component: DespesaComponent}, 
+  {path: 'menu/configuracoes', component: ConfigComponent}
 ]
 
 @NgModule({
