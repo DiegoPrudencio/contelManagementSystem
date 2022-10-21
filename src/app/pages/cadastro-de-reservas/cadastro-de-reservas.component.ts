@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { Hospede } from "src/app/interfaces/hospede";
+import { Quarto } from 'src/app/interfaces/quarto';
 import { Reserva } from "src/app/interfaces/reserva";
 
 @Component({
@@ -14,6 +15,7 @@ export class CadastroDeReservasComponent implements OnInit {
   formularioCadastroReservas!: FormGroup;
   hospedeCadastrado!: Hospede;
   reservaCadastrada!: Reserva;
+  quartoReserva!:Quarto;
   startFormularioCadastroReservas = {
     nome: '',
     cpf: '',
@@ -62,6 +64,7 @@ export class CadastroDeReservasComponent implements OnInit {
 
     this.hospedeCadastrado = {
       nome: this.nome?.value,
+      nomeHospede:this.nome?.value,
       cpf: this.cpf?.value,
       dataNascimento: this.dataNascimento?.value,
       email: this.email?.value,
@@ -75,7 +78,7 @@ export class CadastroDeReservasComponent implements OnInit {
     this.reservaCadastrada = {
       idReserva:'',
       nomeHospede:'',
-      quarto: '',
+      quarto: this.quartoReserva,
       status:'',
       situacao: this.situacao?.value,
       numeroHospedes: this.numeroHospedes?.value,
@@ -83,7 +86,12 @@ export class CadastroDeReservasComponent implements OnInit {
       dataSaidaHospede: this.dataSaidaHospede?.value,
       observacaoReserva: this.observacaoReserva?.value,
       cpfHospede: this.cpf?.value,
-      codigoUnidadeHoteleira: this.codigoUnidadeHoteleira?.value
+      codigoUnidadeHoteleira: this.codigoUnidadeHoteleira?.value,
+
+      situacaoHospede: false,
+      qntHospede:'',
+      dataChegadaHosepde:'',
+      hospede:this.hospedeCadastrado
     }
 
     console.log(this.hospedeCadastrado);

@@ -9,13 +9,19 @@ import { CadastroDeTransacaoComponent } from './pages/cadastro-de-transacao/cada
 import { ReceitaComponent } from './pages/caixaGeral/receita/receita.component';
 import { DespesaComponent } from './pages/caixaGeral/despesa/despesa.component';
 import { ConfigComponent } from './pages/config/config.component';
+<<<<<<< HEAD
 import { CadastroDeReservasComponent } from './pages/cadastro-de-reservas/cadastro-de-reservas.component';
 import { CadastroDeUnidadeHoteleiraComponent } from './pages/cadastro-de-unidade-hoteleira/cadastro-de-unidade-hoteleira.component';
+=======
+import { LoginComponent } from './pages/login/login.component';
+import { MenuComponent } from './pages/menu/menu.component';
+>>>>>>> 2cc07c6cfaa70f3036be2550bbff23c71c386ba1
 
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' }, 
+  {path: 'login', component: LoginComponent}, 
+  {path: 'menu', component: MenuComponent},
   {path: 'painelDeControle', component: PainelControleComponent}, 
   {path: 'mapaDeReserva', component: MapaDeReservasComponent},
   {path: 'mapaDeReserva/cadastroDeReserva', component: CadastroDeReservasComponent}, 
